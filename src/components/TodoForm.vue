@@ -16,7 +16,9 @@
         <option value="pending">pending</option>
       </select>
     </div>
-    <button @click="onSubmit">更新する</button>
+    <app-button>
+      <template slot="text">更新する</template>
+    </app-button>
   </form>
 </template>
 
@@ -24,8 +26,13 @@
 import { Status } from "@/repositories/TodoRepository/types";
 import Vue, { PropType } from "vue";
 import AppInput from "./AppInput.vue";
+import AppButton from "./AppButton.vue";
+
 export default Vue.extend({
-  components: { AppInput },
+  components: {
+    AppInput,
+    AppButton,
+  },
   props: {
     title: {
       type: String,
