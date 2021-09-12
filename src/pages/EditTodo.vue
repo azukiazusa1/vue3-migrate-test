@@ -3,9 +3,9 @@
     <h2>TODOを編集する</h2>
     <todo-form
       @submit="onSubmit"
-      :title.sync="title"
-      :description.sync="description"
-      :status.sync="status"
+      v-model:title="title"
+      v-model:description="description"
+      v-model:status="status"
     />
   </div>
 </template>
