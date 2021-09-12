@@ -2,7 +2,7 @@
   <div class="card">
     <div>
       <span class="title">
-        <router-link :to="`todos/${todo.id}`">{{ todo.title }}</router-link>
+        <router-link :to="`/todos/${todo.id}`">{{ todo.title }}</router-link>
       </span>
       <span class="status" :class="todo.status">{{ todo.status }}</span>
     </div>
