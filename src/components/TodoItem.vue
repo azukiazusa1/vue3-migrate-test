@@ -6,7 +6,7 @@
       </span>
       <span class="status" :class="todo.status">{{ todo.status }}</span>
     </div>
-    <div class="body">作成日：{{ todo.createdAt | formatDate }}</div>
+    <div class="body">作成日：{{ formatDate }}</div>
     <hr />
     <div class="action">
       <button @click="clickDelete">削除</button>
@@ -25,9 +25,12 @@ export default defineComponent({
       required: true,
     },
   },
-  filters: {
-    formatDate(date: Date): string {
-      return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
+  computed: {
+    formatDate(): string {
+      const { createdAt } = this.todo;
+      return `${createdAt.getFullYear()}/${
+        createdAt.getMonth() + 1
+      }/${createdAt.getDate()}`;
     },
   },
   methods: {

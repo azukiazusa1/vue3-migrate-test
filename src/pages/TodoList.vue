@@ -1,8 +1,8 @@
 <template>
   <div>
-    <template v-for="(todo, index) in todos">
-      <span :key="`index-${todo.id}`">{{ index + 1 }}</span>
-      <todo-item :todo="todo" :key="`item-${todo.id}`" @delete="deleteTodo" />
+    <template v-for="(todo, index) in todos" :key="todo.id">
+      <span>{{ index + 1 }}</span>
+      <todo-item :todo="todo" @delete="deleteTodo" />
     </template>
     <router-link to="/todos">追加</router-link>
   </div>

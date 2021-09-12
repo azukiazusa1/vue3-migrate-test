@@ -1,7 +1,7 @@
 <template>
   <label>
     {{ label }}
-    <input id="input" v-bind="$attrs" v-on="inputListeners" />
+    <input id="input" v-bind="$attrs" />
   </label>
 </template>
 
@@ -13,13 +13,6 @@ export default defineComponent({
     label: {
       type: String,
       default: "",
-    },
-  },
-  computed: {
-    inputListeners() {
-      return Object.assign({}, this.$listeners, {
-        input: (e) => this.$emit("input", e.target.value),
-      });
     },
   },
 });
