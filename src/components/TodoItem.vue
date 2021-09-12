@@ -15,10 +15,10 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import { defineComponent, PropType } from "vue";
 import { Todo } from "@/repositories/TodoRepository/types";
 
-export default Vue.extend({
+export default defineComponent({
   props: {
     todo: {
       type: Object as PropType<Todo>,

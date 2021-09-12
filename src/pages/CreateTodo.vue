@@ -11,9 +11,9 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from "vue";
 import TodoForm from "@/components/TodoForm.vue";
 import { Status } from "@/repositories/TodoRepository/types";
-import Vue from "vue";
 
 type Data = {
   title: string;
@@ -21,7 +21,7 @@ type Data = {
   status: Status;
 };
 
-export default Vue.extend({
+export default defineComponent({
   components: { TodoForm },
   data(): Data {
     return {

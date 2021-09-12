@@ -9,11 +9,11 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { defineComponent } from "vue";
 import TodoItem from "@/components/TodoItem.vue";
 import { Todo } from "@/repositories/TodoRepository/types";
 
-export default Vue.extend({
+export default defineComponent({
   components: {
     TodoItem,
   },

@@ -24,11 +24,11 @@
 
 <script lang="ts">
 import { Status } from "@/repositories/TodoRepository/types";
-import Vue, { PropType } from "vue";
+import { defineComponent, PropType } from "vue";
 import AppInput from "./AppInput.vue";
 import AppButton from "./AppButton.vue";
 
-export default Vue.extend({
+export default defineComponent({
   components: {
     AppInput,
     AppButton,
