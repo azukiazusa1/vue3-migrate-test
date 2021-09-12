@@ -1,8 +1,7 @@
 <template>
   <form @submit.prevent="onSubmit">
     <div>
-      <label for="title">タイトル</label>
-      <input type="text" id="title" v-model="titleValue" />
+      <app-input label="タイトル" type="text" v-model="titleValue" />
     </div>
     <div>
       <label for="description">説明</label>
@@ -24,7 +23,9 @@
 <script lang="ts">
 import { Status } from "@/repositories/TodoRepository/types";
 import Vue, { PropType } from "vue";
+import AppInput from "./AppInput.vue";
 export default Vue.extend({
+  components: { AppInput },
   props: {
     title: {
       type: String,
