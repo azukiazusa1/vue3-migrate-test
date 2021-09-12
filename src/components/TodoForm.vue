@@ -17,7 +17,7 @@
       </select>
     </div>
     <app-button>
-      <template slot="text">更新する</template>
+      <template v-slot:text>更新する</template>
     </app-button>
   </form>
 </template>
