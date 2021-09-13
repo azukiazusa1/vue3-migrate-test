@@ -1,24 +1,5 @@
 # vue3-migrate-test
 
-## Project setup
-```
-npm install
-```
+[@vue/compat](https://www.npmjs.com/package/@vue/compat) によってVue 2からVue 3へのマイグレーションをテストしたレポジトリです。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+マイグレーション前のVue 2アプリケーションは`vue2-todo-app`のタグにチェックアウトしてください。
